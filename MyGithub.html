@@ -29,7 +29,7 @@
 <body>
 
 <header>
-    <h1>🚀 Welcome to My GitHub Page 11</h1>
+    <h1>🚀 Welcome to My GitHub Page 12</h1>
 </header>
 
 <section>
@@ -51,25 +51,44 @@ function showMessage() {
 
 </script>
 <script type='text/javascript'>
-	function initEmbeddedMessaging() {
-		try {
-			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
-
-			embeddedservice_bootstrap.init(
-				'00DDT000000Xzto',
-				'Kiehl_s_US_Beauty_Advisor',
-				'https://lorealusa--cccai.sandbox.my.site.com/ESWKiehlsUSBeautyAdvi1782452211038',
-				{
-					scrt2URL: 'https://lorealusa--cccai.sandbox.my.salesforce-scrt.com'
-				}
-			);
-		} catch (err) {
-			console.error('Error loading Embedded Messaging: ', err);
-		}
-	};
+function initEmbeddedMessaging() {
+    try {
+        embeddedservice_bootstrap.settings.language = 'en_US';
+ 
+        embeddedservice_bootstrap.init(
+            '00DDT000000Xzto',
+            'Kiehl_s_US_Beauty_Advisor',
+            'https://lorealusa--cccai.sandbox.my.site.com/ESWKiehlsUSBeautyAdvi1782452211038',
+            {
+                scrt2URL: 'https://lorealusa--cccai.sandbox.my.salesforce-scrt.com'
+            }
+        );
+    } catch (err) {
+        console.error('Error loading Embedded Messaging: ', err);
+    }
+};
+ 
+// Passing Web Context to Prechat - BEGIN
+var sBrand_Code = "KIE";
+var sAF_Language = "en_US";
+var sCountry_Name = "United States";
+ 
+window.addEventListener("onEmbeddedMessagingReady", function () {
+    console.log("[MIAW] onEmbeddedMessagingReady fired");
+ 
+    embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields({
+        "Brand_Code": sBrand_Code,
+        "AF_Language": sAF_Language,
+        "Country_Name": sCountry_Name
+    });
+});
+// Passing Web Context to Prechat - END
 </script>
-<script type='text/javascript' src='https://lorealusa--cccai.sandbox.my.site.com/ESWKiehlsUSBeautyAdvi1782452211038/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
-
+ 
+<script type='text/javascript'
+    src='https://lorealusa--cccai.sandbox.my.site.com/ESWKiehlsUSBeautyAdvi1782452211038/assets/js/bootstrap.min.js%27
+    onload='initEmbeddedMessaging()'>
+</script>
  
 
 
