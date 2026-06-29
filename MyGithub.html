@@ -49,6 +49,8 @@ function showMessage() {
 }
 </script>
 
+</script>
+
 <script type='text/javascript'>
 	function initEmbeddedMessaging() {
 		try {
@@ -66,8 +68,16 @@ function showMessage() {
 		{
 			console.error('Error loading Embedded Messaging: ', err);
 		}
+		
+		
+		
 	};
-
+	
+ window.addEventListener("onEmbeddedMessagingReady", e => {
+        //log event
+        console.log("onEmbeddedMessagingReady event triggered");
+        
+          });
 	 
 		  
 	
