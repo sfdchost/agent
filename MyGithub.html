@@ -29,7 +29,7 @@
 <body>
 
 <header>
-    <h1>🚀 Welcome to My GitHub Page 5</h1>
+    <h1>🚀 Welcome to My GitHub Page 6</h1>
 </header>
 
 <section>
@@ -50,42 +50,24 @@ function showMessage() {
 </script>
 
 <script type='text/javascript'>
-  function initEmbeddedMessaging() {
-    try {
-      embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
- 
-      embeddedservice_bootstrap.init(
-        '00DDT000000Xzto',
-        'GA_US_Beauty_Advisor',
-        'https://lorealusa--cccai.sandbox.my.site.com/ESWGAUSBeautyAdvisor1782379401751',
-        {
-          scrt2URL: 'https://lorealusa--cccai.sandbox.my.salesforce-scrt.com'
-        }
-      );
-    } catch (err) {
-      console.error('Error loading Embedded Messaging: ', err);
-    }
-  };
-//Passing Web Context to Prechat - BEGIN
-    var sBrand_Code = "GIO";
-    var sAF_Language = "en_US";
-    var sCountry_Name = "United Sates";
-    
-    window.addEventListener("onEmbeddedMessagingReady", e => {
-        //log event
-        console.log("onEmbeddedMessagingReady event triggered");
-             
-        //Set invisible prechat field
-        embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields({
-            "Brand_Code" : sBrand_Code,
-            "AF_Language" : sAF_Language,
-            "Country_Name" : sCountry_Name
-        });
-    });
-    //Passing Web Context to Prechat - END
+	function initEmbeddedMessaging() {
+		try {
+			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
 
+			embeddedservice_bootstrap.init(
+				'00DDT000000Xzto',
+				'GA_US_Beauty_Advisor',
+				'https://lorealusa--cccai.sandbox.my.site.com/ESWGAUSBeautyAdvisor1782379401751',
+				{
+					scrt2URL: 'https://lorealusa--cccai.sandbox.my.salesforce-scrt.com'
+				}
+			);
+		} catch (err) {
+			console.error('Error loading Embedded Messaging: ', err);
+		}
+	};
 </script>
-<script type='text/javascript' src='https://lorealusa--cccai.sandbox.my.site.com/ESWGAUSBeautyAdvisor1782379401751/assets/js/bootstrap.… onload='initEmbeddedMessaging()'></script>
+<script type='text/javascript' src='https://lorealusa--cccai.sandbox.my.site.com/ESWGAUSBeautyAdvisor1782379401751/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
  
 
 
