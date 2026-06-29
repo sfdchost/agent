@@ -68,21 +68,22 @@ function initEmbeddedMessaging() {
     }
 };
  
-// Passing Web Context to Prechat - BEGIN
+
 var sBrand_Code = "KIE";
 var sAF_Language = "en_US";
 var sCountry_Name = "United States";
  
 window.addEventListener("onEmbeddedMessagingReady", e => { 
-    console.log("[MIAW] onEmbeddedMessagingReady fired");
- 
-    embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields({
-        "Brand_Code": sBrand_Code,
-        "AF_Language": sAF_Language,
-        "Country_Name": sCountry_Name
+  console.log("onEmbeddedMessagingReady event triggered");
+    
+   //Set invisible prechat field 
+   embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields({
+        "Brand_Code" : sBrand_Code,
+        "AF_Language" : sAF_Language,
+        "Country_Name" : sCountry_Name
     });
 });
-// Passing Web Context to Prechat - END
+
 </script>
  
 <script type='text/javascript'
