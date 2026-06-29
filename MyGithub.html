@@ -50,51 +50,99 @@ function showMessage() {
 </script>
 
 </script>
+<script type='text/javascript'> 
 
-<script type='text/javascript'>
-	function initEmbeddedMessaging() {
-		try {
-			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
+function initEmbeddedMessaging() { 
 
-			embeddedservice_bootstrap.init(
-				'00DDT000000Xzto',
-				'GA_US_Beauty_Advisor',
-				'https://lorealusa--cccai.sandbox.my.site.com/ESWGAUSBeautyAdvisor1782379401751',
-				{
-					scrt2URL: 'https://lorealusa--cccai.sandbox.my.salesforce-scrt.com'
-				}
-			);
-		} catch (err) 
-		{
-			console.error('Error loading Embedded Messaging: ', err);
-		}
-		
-		
-		
-	};
-	var sBrand_Code = "GIO";
-    var sAF_Language = "en_US";
-    var sCountry_Name = "United States";
+try { 
 
- window.addEventListener("onEmbeddedMessagingReady", e => {
-        //log event
-        console.log("onEmbeddedMessagingReady event triggered");
+embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US' 
 
-	  //Set invisible prechat field
-        embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields({
-		    "Brand_Code" : sBrand_Code,
+ 
+
+embeddedservice_bootstrap.init( 
+
+'00DDT000000Xzto', 
+
+'Kiehl_s_US_Beauty_Advisor', 
+
+'https://lorealusa--cccai.sandbox.my.site.com/ESWKiehlsUSBeautyAdvi1782452211038', 
+
+{ 
+
+scrt2URL: 'https://lorealusa--cccai.sandbox.my.salesforce-scrt.com' 
+
+} 
+
+); 
+
+} catch (err) { 
+
+console.error('Error loading Embedded Messaging: ', err); 
+
+} 
+
+}; 
+
+    //Passing Web Context to Prechat - BEGIN  
+
+ 
+
+    var sBrand_Code = "KIE"; 
+ 
+    var sAF_Language = "en_US";  
+
+     var sCountry_Name = "United States";  
+
+ 
+
+      
+
+ 
+
+    window.addEventListener("onEmbeddedMessagingReady", e => {  
+
+ 
+
+        //log event  
+
+ 
+
+        console.log("onEmbeddedMessagingReady event triggered");  
+
+            
+
+        //Set invisible prechat field  
+
+        embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields({  
+
+ 
+
+            "Brand_Code" : sBrand_Code,
+
             "AF_Language" : sAF_Language,
-            "Country_Name" : sCountry_Name
 
-        });
-        
-          });
-	 
-		  
-	
-</script>
+            “Country_Name" : sCountry_Name  
 
-<script type='text/javascript' src='https://lorealusa--cccai.sandbox.my.site.com/ESWGAUSBeautyAdvisor1782379401751/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+ 
+
+        });  
+
+ 
+
+    });  
+
+ 
+
+    //Passing Web Context to Prechat - END  
+
+ 
+
+</script>  
+
+</script> 
+
+<script type='text/javascript' src='https://lorealusa--cccai.sandbox.my.site.com/ESWKiehlsUSBeautyAdvi1782452211038/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script> 
  
 
 
